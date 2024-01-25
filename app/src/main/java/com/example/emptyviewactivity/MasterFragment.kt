@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.commit
@@ -31,17 +32,30 @@ class MasterFragment : Fragment() {
         val recyclerView: RecyclerView = v.findViewById<RecyclerView>(R.id.recyclerViewPokemon)
         var adaptador = PokemonAdapter(this.pokemonViewModel.pokemons)
         adaptador.click = { position, pokemon ->
-            kotlin.run {
+            run {
+
                 // Se selecciona el pokemon
                 this.pokemonViewModel.selected = pokemon
                 val fm: FragmentManager = parentFragmentManager
-                fm.commit {
-                    replace(R.id.fragmentContainerView, SlaveFragment.newInstance())
-                    addToBackStack("replacement")
+                if (!resources.getBoolean(R.bool.horizontal)) {
+                    // Pantallla Vertical
+                    fm.commit {
+                        replace(R.id.fragmentContainerView, SlaveFragment.newInstance())
+                        addToBackStack("replacement")
+                    }
+                } else {
+                    // Pantalla Horizontal
+                    val contenedor = v.findViewById<FragmentContainerView>(R.id.fragmentContainerViewPokemonDetailLand)
+                    val fragmentManager = childFragmentManager
+                    val fragment = fragmentManager.findFragmentById(contenedor?.id ?: -1)
+                    if (fragment != null && fragment is SlaveFragment) {
+                        (fragment).update()
+                    }
                 }
+
             }
         }
-        val layoutManager = GridLayoutManager(this.context, 2)
+        val layoutManager = GridLayoutManager(this.context, 1)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adaptador
         return v
