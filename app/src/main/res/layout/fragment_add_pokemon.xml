@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPokemonFragment">
+
+    <TextView
+        android:id="@+id/addNombreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        android:text="Nombre:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addNameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addNombreText"
+        app:layout_constraintStart_toEndOf="@+id/addNombreText"
+        app:layout_constraintTop_toTopOf="@+id/addNombreText"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <TextView
+        android:id="@+id/addTipo1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Tipo 1:"
+        app:layout_constraintStart_toStartOf="@+id/addNombreText"
+        app:layout_constraintTop_toBottomOf="@+id/addNombreText" />
+
+    <EditText
+        android:id="@+id/addTipo1Field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addTipo1Text"
+        app:layout_constraintEnd_toEndOf="@+id/addNameField"
+        app:layout_constraintTop_toTopOf="@+id/addTipo1Text" />
+
+    <TextView
+        android:id="@+id/addTipo2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Tipo 2:"
+        app:layout_constraintStart_toStartOf="@+id/addTipo1Text"
+        app:layout_constraintTop_toBottomOf="@+id/addTipo1Text" />
+
+    <EditText
+        android:id="@+id/addTipo2Field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addTipo2Text"
+        app:layout_constraintEnd_toEndOf="@+id/addTipo1Field"
+        app:layout_constraintTop_toTopOf="@+id/addTipo2Text" />
+
+    <TextView
+        android:id="@+id/addAlturaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Altura: "
+        app:layout_constraintStart_toStartOf="@+id/addTipo2Text"
+        app:layout_constraintTop_toBottomOf="@+id/addTipo2Text" />
+
+    <EditText
+        android:id="@+id/addAlturaField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addAlturaText"
+        app:layout_constraintEnd_toEndOf="@+id/addTipo2Field"
+        app:layout_constraintTop_toTopOf="@+id/addAlturaText" />
+
+    <TextView
+        android:id="@+id/addPesoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Peso:"
+        app:layout_constraintStart_toStartOf="@+id/addAlturaText"
+        app:layout_constraintTop_toBottomOf="@+id/addAlturaText" />
+
+    <EditText
+        android:id="@+id/addPesoField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addPesoText"
+        app:layout_constraintEnd_toEndOf="@+id/addAlturaField"
+        app:layout_constraintTop_toTopOf="@+id/addPesoText" />
+
+    <TextView
+        android:id="@+id/addDescripccionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Descripcion:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPesoField" />
+
+    <EditText
+        android:id="@+id/addDescripcionField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDescripccionText" />
+
+    <Button
+        android:id="@+id/cancelAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#FF0000"
+        android:text="Cancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDescripcionField" />
+
+    <Button
+        android:id="@+id/acceptAddPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="76dp"
+        android:backgroundTint="#02FD23"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelAddButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDescripcionField" />
+</androidx.constraintlayout.widget.ConstraintLayout>

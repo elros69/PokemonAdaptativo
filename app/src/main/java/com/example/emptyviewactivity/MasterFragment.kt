@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
@@ -53,6 +54,13 @@ class MasterFragment : Fragment() {
                     }
                 }
 
+            }
+        }
+        v.findViewById<Button>(R.id.addPokemonButton).setOnClickListener {
+            val fm: FragmentManager = parentFragmentManager
+            fm.commit {
+                replace(R.id.fragmentContainerView, AddPokemonFragment.newInstance())
+                addToBackStack("replacement")
             }
         }
         val layoutManager = GridLayoutManager(this.context, 1)

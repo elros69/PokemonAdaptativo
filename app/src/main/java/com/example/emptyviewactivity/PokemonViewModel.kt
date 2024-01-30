@@ -49,4 +49,9 @@ class PokemonViewModel: ViewModel() {
             )
         )
     }
+
+    public fun addPokemon(pokemon: Pokemon) {
+        this._pokemons.add(pokemon)
+    }
+
 }
