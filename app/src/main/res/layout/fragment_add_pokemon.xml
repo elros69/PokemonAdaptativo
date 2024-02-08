@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:ems="10"
+        android:hint="Nombre"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/addNombreText"
@@ -44,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Tipo 1"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/addTipo1Text"
@@ -64,6 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Tipo 2"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/addTipo2Text"
@@ -84,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Altura"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/addAlturaText"
@@ -104,7 +108,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
+        android:hint="Peso"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/addPesoText"
         app:layout_constraintEnd_toEndOf="@+id/addAlturaField"
@@ -127,6 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
+        android:hint="Descripcion"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,22 +143,42 @@
         android:id="@+id/cancelAddButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="84dp"
         android:backgroundTint="#FF0000"
-        android:text="Cancelar"
+        android:text="Atras"
+        app:layout_constraintBottom_toBottomOf="@+id/acceptAddPokemon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addDescripcionField" />
+        app:layout_constraintTop_toTopOf="@+id/acceptAddPokemon" />
 
     <Button
         android:id="@+id/acceptAddPokemon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="76dp"
         android:backgroundTint="#02FD23"
         android:text="Aceptar"
-        app:layout_constraintBottom_toBottomOf="@+id/cancelAddButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addDescripcionField" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAddPokemon" />
+
+    <ImageView
+        android:id="@+id/imageViewAddPokemon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDescripcionField"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewAddPokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewAddPokemon"
+        app:layout_constraintVertical_bias="0.50" />
 </androidx.constraintlayout.widget.ConstraintLayout>

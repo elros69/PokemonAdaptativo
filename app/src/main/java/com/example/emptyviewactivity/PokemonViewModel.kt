@@ -1,6 +1,8 @@
 package com.example.emptyviewactivity
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
+import kotlin.math.log
 
 class PokemonViewModel: ViewModel() {
     
@@ -52,6 +54,7 @@ class PokemonViewModel: ViewModel() {
 
     public fun addPokemon(pokemon: Pokemon) {
         this._pokemons.add(pokemon)
+        Log.d("Tonto", "He entrado aqui")
     }
 
 }
